@@ -9,7 +9,6 @@ database = os.getenv("SQL_DATABASE")
 usuario = os.getenv("SQL_USERNAME")
 passwd = os.getenv("SQL_USER_PASSWORD")
 
-#engine = create_engine(f'mssql+pyodbc://{sql_username}:{sql_password}@{sql_server}/{sql_database}?driver=ODBC Driver 18 for SQL Server')
 conn = pymssql.connect(server=servidor, user=usuario, password=passwd, database=database, charset='UTF-8')
 
 cursor = conn.cursor()
