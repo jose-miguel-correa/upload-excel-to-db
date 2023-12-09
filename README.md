@@ -10,3 +10,23 @@
 - Los datos deben pasar a una Fact Table.
 - Diseñar base de datos y relacionar tablas adecuadamente.
 - Generar procedimientos almacenados gestionados por Python.
+
+### Modelo Base de inserción de datos desde planillas Excel a MSSQL Server
+
+### Crear base de datos MSSQL Server en entorno Linux:
+
+- Bajar docker de mssql.                               <br>
+```
+docker pull mcr.microsoft.com/mssql/server
+```
+- Correr imagen.
+```
+docker run <nombre_imagen>
+```
+- SA_PASSWORD=<tu-contraseña>.
+- La base de datos para este modelo siempre es "master".<br>
+```
+docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=MSSQL_Server2023' -p 1433:1433 -d mcr.microsoft.com/mssql/server
+```
+
+### Con alguna extensión del VSCODE, conectar a la db.
