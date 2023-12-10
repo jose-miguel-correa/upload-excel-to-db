@@ -11,11 +11,10 @@ sql_password = "jhf80DD%80F6g"
 # Crear conexión
 conn = pymssql.connect(server=sql_server, user=sql_username, password=sql_password, database=sql_database, charset='UTF-8')
 
-# Create a SQLAlchemy engine
 cursor = conn.cursor()
 
 file_path = './files/Informe STAFF SEM 41.xlsx'
-# Read the Excel file into a Pandas DataFrame
+# Usar openpyxl v3.0.10
 df = pd.read_excel(file_path, dtype=str, engine="openpyxl", sheet_name="Status C de A", skiprows=1)
 df = df.where(pd.notna(df), None)
 df.rename(columns={'Fecha inicio de revisión': 'Fecha_Inicio_de_Revision'}, inplace=True)
