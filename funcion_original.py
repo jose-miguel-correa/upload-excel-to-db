@@ -2,14 +2,13 @@ import os
 import pandas as pd
 import pymssql
 
-# SQL Server connection parameters
+#  Parámetros de conexión al SQL Server
 sql_server = "localhost"
 sql_database = "master"
 sql_username = "sa"
 sql_password = "jhf80DD%80F6g"
 
-# Create a SQLAlchemy engine with the SQL Server dialect
-#engine = create_engine(f'mssql+pyodbc://{sql_username}:{sql_password}@{sql_server}/{sql_database}?driver=ODBC Driver 18 for SQL Server')
+# Crear conexión
 conn = pymssql.connect(server=sql_server, user=sql_username, password=sql_password, database=sql_database, charset='UTF-8')
 
 # Create a SQLAlchemy engine
