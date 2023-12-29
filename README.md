@@ -30,3 +30,7 @@ docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=MSSQL_Server2023' -p 1433:1433 -d 
 ```
 
 ### Con alguna extensión del VSCODE, conectar a la db.
+Revisar esta web para conectarse por <kbd>sqlcmd</kbd> desde un entorno Linux:
+```
+https://www.howtoforge.com/how-to-install-and-use-microsoft-sql-server-on-debian-11/
+```
